@@ -73,15 +73,22 @@
 			}
 		},
 		created() {
-			console.log(apis)
-			apis.getlist({page:1,pageSize:11,search:'',}).then(res=>{
-				console.log(res)
-			})
-			// 跨域可以用nginx 调试 本地服务 
+			 this.getData({page:1,pageSize:11,search:'1'})
 		},
 		methods: {
+			getData(arg){
+				console.log(apis)
+				var _this = this; // 这个this 很重要
+				apis.getlist({page:1,pageSize:11,search:arg.search,}).then(res=>{
+					console.log(res) // this.list  不能给那个this list 附值
+					_this.list = res.list;
+					_this.recentlist = res.list;
+				})
+				// 跨域可以用nginx 调试 本地服务
+			},
 			search(){
 				console.log(1,this.value.value,this.searchKey)
+				this.getData({page:1,pageSize:11,search:this.value.value,})
 			}
 		}
 	}

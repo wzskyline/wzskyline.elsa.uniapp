@@ -1,5 +1,5 @@
 let host = location.host.includes('8000')?'http://106.12.144.8:7001': `http://${location.host}`;
-host = 'http://127.0.0.1:1234'
+host = '/api'
 export const urls={
   list:`${host}/list`,
   update:`${host}/update`,
