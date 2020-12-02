@@ -1,11 +1,8 @@
 {
-	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "涨知识"
-			
-		}
-	}],
+	"pages": [
+		{ "path": "pages/index/index", "style": { "navigationBarTitleText": "涨知识"}},
+		{ "path": "pages/index/Loadding", "style": { "navigationBarTitleText": "加载"}}
+		],
 	"globalStyle": {
 		    "navigationBarTextStyle": "black",
 		    "navigationBarTitleText": "涨知识",

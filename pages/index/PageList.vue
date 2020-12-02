@@ -10,7 +10,7 @@
 		<text class="intro">最近浏览</text>
 		<view class="list">
 			
-			 <view class="item"  v-for="(item,i) in recentlist">
+			 <view class="item"  v-for="(item,i) in recentlist" @click="toLoadding">
 			 	 <view class="item-left">
 			 		<view :class="`icons ${item.type}`"> </view>
 			 	 </view>
@@ -33,7 +33,7 @@
 		<view class="list">
 			
 			
-			<view class="item"  v-for="(item,i) in recentlist">
+			<view class="item"  v-for="(item,i) in recentlist" @click="toLoadding">
 				 <view class="item-left">
 					<view :class="`icons ${item.type}`"> </view>
 				 </view>
@@ -89,7 +89,10 @@
 			search(){
 				console.log(1,this.value.value,this.searchKey)
 				this.getData({page:1,pageSize:11,search:this.value.value,})
-			}
+			},
+			toLoadding(){
+				  uni.navigateTo({url: '/pages/index/Loadding',})
+			},
 		}
 	}
 </script>
