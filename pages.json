@@ -1,5 +1,6 @@
 {
 	"pages": [
+		{ "path": "pages/index/tab", "style": { "navigationBarTitleText": "涨知识"}},
 		{ "path": "pages/index/index", "style": { "navigationBarTitleText": "涨知识"}},
 		{ "path": "pages/index/Loadding", "style": { "navigationBarTitleText": "加载"}}
 		],
